@@ -1,6 +1,9 @@
-input.onLogoEvent(TouchButtonEvent.Pressed, function () {
+input.onButtonPressed(Button.A, function () {
     basic.pause(200)
     parcours(70, 71)
+})
+input.onLogoEvent(TouchButtonEvent.Pressed, function () {
+	
 })
 function parcours (vg: number, vd: number) {
     basic.showIcon(IconNames.Square)
@@ -11,7 +14,7 @@ function parcours (vg: number, vd: number) {
     Kitronik_Move_Motor.stop()
     // Spin start
     Kitronik_Move_Motor.motorOn(Kitronik_Move_Motor.Motors.MotorLeft, Kitronik_Move_Motor.MotorDirection.Forward, vg)
-    basic.pause(250)
+    basic.pause(265)
     Kitronik_Move_Motor.stop()
     // Move 2
     Kitronik_Move_Motor.motorOn(Kitronik_Move_Motor.Motors.MotorLeft, Kitronik_Move_Motor.MotorDirection.Forward, vg)
@@ -25,7 +28,7 @@ function parcours (vg: number, vd: number) {
     // Move 3
     Kitronik_Move_Motor.motorOn(Kitronik_Move_Motor.Motors.MotorLeft, Kitronik_Move_Motor.MotorDirection.Forward, vg)
     Kitronik_Move_Motor.motorOn(Kitronik_Move_Motor.Motors.MotorRight, Kitronik_Move_Motor.MotorDirection.Forward, vd)
-    basic.pause(1000)
+    basic.pause(1600)
     Kitronik_Move_Motor.stop()
     // Spin 3
     Kitronik_Move_Motor.motorOn(Kitronik_Move_Motor.Motors.MotorLeft, Kitronik_Move_Motor.MotorDirection.Forward, vg)
@@ -34,9 +37,8 @@ function parcours (vg: number, vd: number) {
     // Move 4 (faire en sorte qu'il s'arrête juste à la sortie)
     Kitronik_Move_Motor.motorOn(Kitronik_Move_Motor.Motors.MotorLeft, Kitronik_Move_Motor.MotorDirection.Forward, vg)
     Kitronik_Move_Motor.motorOn(Kitronik_Move_Motor.Motors.MotorRight, Kitronik_Move_Motor.MotorDirection.Forward, vd)
-    basic.showIcon(IconNames.Yes)
-    basic.pause(1000)
-    basic.clearScreen()
+    basic.pause(2000)
+    Kitronik_Move_Motor.stop()
 }
 basic.showIcon(IconNames.Yes)
 basic.pause(1000)
