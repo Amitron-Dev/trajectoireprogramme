@@ -32,7 +32,7 @@ function parcours (vg: number, vd: number) {
     Kitronik_Move_Motor.stop()
     // Spin 3
     Kitronik_Move_Motor.motorOn(Kitronik_Move_Motor.Motors.MotorLeft, Kitronik_Move_Motor.MotorDirection.Forward, vg)
-    basic.pause(250)
+    basic.pause(270)
     Kitronik_Move_Motor.stop()
     // Move 4 (faire en sorte qu'il s'arrête juste à la sortie)
     Kitronik_Move_Motor.motorOn(Kitronik_Move_Motor.Motors.MotorLeft, Kitronik_Move_Motor.MotorDirection.Forward, vg)
