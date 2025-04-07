@@ -14,7 +14,7 @@ function parcours (vg: number, vd: number) {
     Kitronik_Move_Motor.stop()
     // Spin start
     Kitronik_Move_Motor.motorOn(Kitronik_Move_Motor.Motors.MotorLeft, Kitronik_Move_Motor.MotorDirection.Forward, vg)
-    basic.pause(265)
+    basic.pause(290)
     Kitronik_Move_Motor.stop()
     // Move 2
     Kitronik_Move_Motor.motorOn(Kitronik_Move_Motor.Motors.MotorLeft, Kitronik_Move_Motor.MotorDirection.Forward, vg)
